@@ -48,6 +48,8 @@ RUN mkdir -p ${MODEL_BASE_PATH}
 # The only required piece is the model name in order to differentiate endpoints
 ENV MODEL_NAME=model
 
+RUN pip install gdown && gdown --id 1iP4Vy0KztwqyLd8_T1jVmGum2ht0gG-r
+
 # Create a script that runs the model server so we can use environment variables
 # while also passing in arguments from the docker command line
 RUN echo '#!/bin/bash \n\n\
